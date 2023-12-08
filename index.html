@@ -10,65 +10,90 @@
       sizes="32x32"
       href="./assets/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link href="./output.css" rel="stylesheet" />
 
     <title>Frontend Mentor | Tic Tac Toe</title>
   </head>
-  <body class="bg-darkNavy text-white h-screen">
+  <body class="bg-darkNavy text-white h-screen font-fontOutfit">
     <!-- New game menu start -->
     <div class="flex items-center justify-center h-full">
       <div id="new-game-menu" class="w-[90%] flex flex-col gap-5">
-        <div class="flex justify-center">
-          <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z"
-              fill="#31C3BD"
-              fill-rule="evenodd"
-            />
+        <div class="flex gap-2 justify-center">
+          <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+            <g transform="scale(0.5)">
+              <path
+                d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z"
+                fill="#31C3BD"
+                fill-rule="evenodd"
+              />
+            </g>
           </svg>
           <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z"
-              fill="#F2B137"
-            />
+            <g transform="scale(0.5)">
+              <path
+                d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z"
+                fill="#F2B137"
+              />
+            </g>
           </svg>
         </div>
 
         <div
           class="bg-semiDarkNavy flex flex-col justify-center gap-3 rounded-xl"
         >
-          <p class="text-center">Pick player 1's mark</p>
+          <p class="text-center m-3 text-silverColor uppercase">
+            Pick player 1's mark
+          </p>
           <div class="flex justify-center">
-            <div class="flex">
-              <div class="bg-darkNavy">
-                <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M51.12 1.269c.511 0 1.023.195 1.414.586l9.611 9.611c.391.391.586.903.586 1.415s-.195 1.023-.586 1.414L44.441 32l17.704 17.705c.391.39.586.902.586 1.414 0 .512-.195 1.024-.586 1.415l-9.611 9.611c-.391.391-.903.586-1.415.586a1.994 1.994 0 0 1-1.414-.586L32 44.441 14.295 62.145c-.39.391-.902.586-1.414.586a1.994 1.994 0 0 1-1.415-.586l-9.611-9.611a1.994 1.994 0 0 1-.586-1.415c0-.512.195-1.023.586-1.414L19.559 32 1.855 14.295a1.994 1.994 0 0 1-.586-1.414c0-.512.195-1.024.586-1.415l9.611-9.611c.391-.391.903-.586 1.415-.586s1.023.195 1.414.586L32 19.559 49.705 1.855c.39-.391.902-.586 1.414-.586Z"
-                    stroke="#31C3BD"
-                    stroke-width="2"
-                    fill="none"
-                  />
+            <div class="bg-darkNavy p-2 flex rounded-xl">
+              <div class="bg-darkNavy px-8 py-1 rounded-xl flex items-center">
+                <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                  <g transform="scale(0.5)">
+                    <path
+                      d="M15.002 1.147 32 18.145 48.998 1.147a3 3 0 0 1 4.243 0l9.612 9.612a3 3 0 0 1 0 4.243L45.855 32l16.998 16.998a3 3 0 0 1 0 4.243l-9.612 9.612a3 3 0 0 1-4.243 0L32 45.855 15.002 62.853a3 3 0 0 1-4.243 0L1.147 53.24a3 3 0 0 1 0-4.243L18.145 32 1.147 15.002a3 3 0 0 1 0-4.243l9.612-9.612a3 3 0 0 1 4.243 0Z"
+                      fill="#A8BFC9"
+                      fill-rule="evenodd"
+                    />
+                  </g>
                 </svg>
               </div>
-              <div class="bg-silverColor">
-                <svg width="66" height="66" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M33 1c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C15.327 65 1 50.673 1 33 1 15.327 15.327 1 33 1Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z"
-                    stroke="#F2B137"
-                    stroke-width="2"
-                    fill="none"
-                  />
+              <div class="bg-silverColor px-6 py-1 rounded-xl">
+                <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                  <g transform="scale(0.5)">
+                    <path
+                      d="M32 0c17.673 0 32 14.327 32 32 0 17.673-14.327 32-32 32C14.327 64 0 49.673 0 32 0 14.327 14.327 0 32 0Zm0 18.963c-7.2 0-13.037 5.837-13.037 13.037 0 7.2 5.837 13.037 13.037 13.037 7.2 0 13.037-5.837 13.037-13.037 0-7.2-5.837-13.037-13.037-13.037Z"
+                      fill="#1A2A33"
+                    />
+                  </g>
                 </svg>
               </div>
             </div>
           </div>
 
-          <p class="text-center">Remember: X goes first</p>
+          <p class="text-center uppercase text-silverColor m-3">
+            Remember: X goes first
+          </p>
         </div>
 
-        <div class="flex flex-col justify-center gap-2">
-          <button class="bg-lightYellow">New Game (vs CPU)</button>
-          <button class="bg-lightBlue">New Game (vs player)</button>
+        <div class="flex flex-col justify-center gap-3">
+          <button
+            class="bg-lightYellow text-darkNavy font-bold uppercase py-2 rounded-xl"
+          >
+            New Game (vs CPU)
+          </button>
+          <button
+            class="bg-lightBlue text-darkNavy font-bold uppercase py-2 rounded-xl"
+          >
+            New Game (vs player)
+          </button>
         </div>
       </div>
 
